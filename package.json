@@ -8,8 +8,7 @@
   },
   "scripts": {
     "dev": "vite dev --port 3000",
-    "build": "vite build",
-    "build:pages": "vite build --config vite.pages.config.ts"
+    "build": "vite build"
   },
   "dependencies": {
     "@tanstack/react-router": "1.168.22",
