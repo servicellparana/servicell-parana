@@ -39,19 +39,17 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
-        env:
-          GITHUB_PAGES: 'true'
+        run: pnpm build:pages
 
       - name: Prepare Pages artifact
         run: |
-          cp dist/client/index.html dist/client/404.html
-          touch dist/client/.nojekyll
+          cp dist/pages/index.html dist/pages/404.html
+          touch dist/pages/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: dist/pages
 
   deploy:
     environment:
