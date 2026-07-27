@@ -32,6 +32,9 @@ jobs:
           corepack enable
           corepack prepare pnpm@11.9.0 --activate
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
