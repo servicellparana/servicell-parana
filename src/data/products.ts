@@ -25,6 +25,22 @@ export interface Product {
 
 const products: Product[] = [
   {
+    id: 15,
+    slug: 'fundas-silicona-iphone-xr',
+    name: 'Fundas silicona iPhone XR',
+    category: 'Fundas',
+    images: ['/assets/products/fundas-silicona-iphone-xr.png'],
+    description: 'Fundas de silicona para iPhone XR disponibles en varios colores. Elegí el color según la foto antes de agregar al carrito.',
+    shortDescription: 'Fundas de silicona para iPhone XR en varios colores.',
+    price: 7000,
+    badge: 'iPhone XR',
+    featured: true,
+    commentPrompt: 'Color de funda',
+    commentPlaceholder: 'Ejemplo: rosa, negro, blanco o naranja',
+    variants: [{ name: 'Modelo', options: ['iPhone XR'] }],
+    specs: ['Modelo iPhone XR', 'Material silicona', 'Varios colores disponibles', 'Indicar color en comentario'],
+  },
+  {
     id: 14,
     slug: 'cargador-portatil-tars-20000mah-magsafe',
     name: 'Cargador portátil Tars 20000 mAh',
