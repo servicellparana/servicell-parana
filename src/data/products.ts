@@ -135,7 +135,7 @@ const products: Product[] = [
     slug: 'fundas-magsafe-iphone-13',
     name: 'Fundas MagSafe iPhone 13',
     category: 'Fundas',
-    images: ['/assets/products/fundas-magsafe-iphone-13.png'],
+    images: ['/assets/products/fundas-magsafe-iphone-13-v2.png'],
     description: 'Fundas MagSafe para iPhone 13. Elegí el número de la funda según la foto y escribilo en el comentario antes de agregar al carrito.',
     shortDescription: 'Elegí el número de la funda: 01, 02 o 03.',
     price: 7000,
