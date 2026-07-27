@@ -9,6 +9,7 @@ export const Route = createFileRoute('/')({ component: Storefront })
 const categories: Array<'Todos' | ProductCategory> = ['Todos', 'Celulares', 'Smartwatch', 'Fundas', 'Audio', 'Cargadores', 'Protección']
 
 function Storefront() {
+  const baseUrl = import.meta.env.BASE_URL
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState<(typeof categories)[number]>('Todos')
   const [sort, setSort] = useState('destacados')
@@ -30,7 +31,7 @@ function Storefront() {
     <main>
       <section className="catalog storefront-catalog" id="productos">
         <div className="shop-title">
-          <img src="/assets/servicell-logo.png" alt="Servicell Paraná" />
+          <img src={`${baseUrl}assets/servicell-logo.png`} alt="Servicell Paraná" />
           <h1>Productos</h1>
         </div>
         <div className="catalog-toolbar">
@@ -57,7 +58,7 @@ function Storefront() {
         <div><ShieldCheck /><span><b>Protección</b>Vidrios y pantallas</span></div>
       </section>
 
-      <footer><img src="/assets/servicell-logo.png" alt="Servicell Paraná" /><p>Accesorios para celulares.</p><div><a href="#productos">Productos</a><a href="https://wa.me/5493496503349?text=Hola%20Servicell%20Paran%C3%A1" target="_blank" rel="noreferrer">WhatsApp ↗</a></div><small>© 2026 Servicell Paraná</small></footer>
+      <footer><img src={`${baseUrl}assets/servicell-logo.png`} alt="Servicell Paraná" /><p>Accesorios para celulares.</p><div><a href="#productos">Productos</a><a href="https://wa.me/5493496503349?text=Hola%20Servicell%20Paran%C3%A1" target="_blank" rel="noreferrer">WhatsApp ↗</a></div><small>© 2026 Servicell Paraná</small></footer>
     </main>
   )
 }

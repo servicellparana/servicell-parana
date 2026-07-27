@@ -6,18 +6,19 @@ import { useCart } from './CartProvider'
 export function SiteHeader() {
   const { count, openCart } = useCart()
   const [menuOpen, setMenuOpen] = useState(false)
+  const baseUrl = import.meta.env.BASE_URL
 
   return (
     <header className="site-header">
       <Link to="/" className="brand" aria-label="Servicell Paraná, inicio">
-        <img src="/assets/servicell-logo-transparent.png" alt="Servicell Paraná" />
+        <img src={`${baseUrl}assets/servicell-logo-transparent.png`} alt="Servicell Paraná" />
       </Link>
       <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegación principal">
-        <a href="/#productos" onClick={() => setMenuOpen(false)}>Productos</a>
-        <a href="/#categorias" onClick={() => setMenuOpen(false)}>Categorías</a>
+        <a href={`${baseUrl}#productos`} onClick={() => setMenuOpen(false)}>Productos</a>
+        <a href={`${baseUrl}#categorias`} onClick={() => setMenuOpen(false)}>Categorías</a>
       </nav>
       <div className="header-actions">
-        <a className="icon-button search-shortcut" href="/#productos" aria-label="Buscar productos"><Search size={19} /></a>
+        <a className="icon-button search-shortcut" href={`${baseUrl}#productos`} aria-label="Buscar productos"><Search size={19} /></a>
         <button className="cart-button" onClick={openCart} aria-label={`Abrir carrito con ${count} productos`}>
           <ShoppingBag size={19} />
           <span>Carrito</span>
