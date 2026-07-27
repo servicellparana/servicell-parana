@@ -1,0 +1,10 @@
+node_modules
+dist
+.netlify
+.pnpm-store
+.vinxi
+.output
+.env
+.env.local
+*.log
+*.zip

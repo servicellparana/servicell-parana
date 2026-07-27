@@ -1,0 +1,10 @@
+packages:
+  - .
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+
+# The app uses freshly generated lockfile entries. Keep project installs usable
+# with pnpm 11 while Netlify builds from the committed lockfile.
+minimumReleaseAge: 0
